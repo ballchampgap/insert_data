@@ -47,7 +47,7 @@ while ($row = $epidemicen->fetch_assoc()) {
 
 
     $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description,plant_en,epidemic_en)
-    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$plant_name_en',$epic_en)";
+    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$plant_name_en','$epic_en')";
     $resultInsert = mysqli_query($conn, $sql);
 
 //แจ้งเตือน
