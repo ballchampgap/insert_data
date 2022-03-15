@@ -10,7 +10,7 @@ $data_pest_epic = $_POST['data_pest_epic_id'];
 $latitude = $_POST['lat'];
 $longitude = $_POST['lon'];
 $descrip = $_POST['descrip'];
-// $result = getAddress($latitude, $longitude);
+$result = getAddress($latitude, $longitude);
 // query planteco name_th
 $plant = mysqli_query($conn, "SELECT * FROM plantecopests WHERE id = '$planteco'");
 while ($row = $plant->fetch_assoc()) {
@@ -32,22 +32,22 @@ while ($row = $pesten->fetch_assoc()) {
     $pest_en = $row['name_en'];
 }
 
-// function getAddress($latitude, $longitude)
-// {
-//         //google map api url
-//         $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
+function getAddress($latitude, $longitude)
+{
+        //google map api url
+        $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
 
-//         // send http request
-//         $geocode = file_get_contents($url);
-//         $json = json_decode($geocode);
-//         $address = $json->results[3]->formatted_address;
-//         return $address;
-// }
+        // send http request
+        $geocode = file_get_contents($url);
+        $json = json_decode($geocode);
+        $address = $json->results[3]->formatted_address;
+        return $address;
+}
 
 
 
-$sql = "INSERT INTO pests (yname,plant_type,data_pest,lat,lon,description,plant_en,pest_en)
-VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th', '$latitude','$longitude','$descrip','$plant_en','$pest_en')";
+$sql = "INSERT INTO pests (yname,plant_type,data_pest,lat,lon,description,plant_en,pest_en,address)
+VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th', '$latitude','$longitude','$descrip','$plant_en','$pest_en','$result')";
 $resultInsert = mysqli_query($conn, $sql);
 //แจ้งเตือน
 ini_set('display_errors', 1);
