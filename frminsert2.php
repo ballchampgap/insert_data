@@ -10,7 +10,7 @@ $data_pest_epic = $_POST['data_pest_epic_id'];
 $latitude = $_POST['lat'];
 $longitude = $_POST['lon'];
 $descrip = $_POST['descrip'];
-$result = getAddress($latitude, $longitude);
+// $result = getAddress($latitude, $longitude);
 // query planteco name_th
 $plant = mysqli_query($conn, "SELECT * FROM plantecopests WHERE id = '$planteco'");
 while ($row = $plant->fetch_assoc()) {
@@ -22,17 +22,17 @@ while ($row = $data_pest_epic_a->fetch_assoc()) {
     $data_pest_epic_name_th = $row['name_th'];
 }
 
-function getAddress($latitude, $longitude)
-{
-        //google map api url
-        $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
+// function getAddress($latitude, $longitude)
+// {
+//         //google map api url
+//         $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
 
-        // send http request
-        $geocode = file_get_contents($url);
-        $json = json_decode($geocode);
-        $address = $json->results[3]->formatted_address;
-        return $address;
-}
+//         // send http request
+//         $geocode = file_get_contents($url);
+//         $json = json_decode($geocode);
+//         $address = $json->results[3]->formatted_address;
+//         return $address;
+// }
 
 
 
