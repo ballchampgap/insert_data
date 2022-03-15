@@ -6,6 +6,7 @@ require_once "connect.php";
 
 $pname = $_POST['pname'];
 $planteco = $_POST['planteco_id'];
+$data_pest_epic = $_POST['data_pest_epic_id'];
 $latitude = $_POST['lat'];
 $longitude = $_POST['lon'];
 $descrip = $_POST['descrip'];
