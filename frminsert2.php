@@ -21,6 +21,16 @@ $data_pest_epic_a = mysqli_query($conn, "SELECT * FROM datapests WHERE id = '$da
 while ($row = $data_pest_epic_a->fetch_assoc()) {
     $data_pest_epic_name_th = $row['name_th'];
 }
+// query planten name_en
+$planten = mysqli_query($conn, "SELECT * FROM plantecopests WHERE id = '$planteco'");
+while ($row = $planten->fetch_assoc()) {
+    $plant_en = $row['name_en'];
+}
+// query dataepidemicen name_en
+$pesten = mysqli_query($conn, "SELECT * FROM datapests WHERE id = '$data_pest_epic'");
+while ($row = $pesten->fetch_assoc()) {
+    $pest_en = $row['name_en'];
+}
 
 // function getAddress($latitude, $longitude)
 // {
@@ -36,8 +46,8 @@ while ($row = $data_pest_epic_a->fetch_assoc()) {
 
 
 
-$sql = "INSERT INTO pests (yname,plant_type,data_pest,lat,lon,description)
-VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th', '$latitude','$longitude','$descrip')";
+$sql = "INSERT INTO pests (yname,plant_type,data_pest,lat,lon,description,plant_en,pest_en)
+VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th', '$latitude','$longitude','$descrip','$plant_en','$pest_en')";
 $resultInsert = mysqli_query($conn, $sql);
 //แจ้งเตือน
 ini_set('display_errors', 1);

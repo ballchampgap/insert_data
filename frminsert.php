@@ -21,7 +21,17 @@ $data_pest_epic_a = mysqli_query($conn, "SELECT * FROM dataepidemics WHERE id = 
 while ($row = $data_pest_epic_a->fetch_assoc()) {
     $data_pest_epic_name_th = $row['name_th'];
 }
+// query plant_en name_en
+$planten = mysqli_query($conn, "SELECT * FROM plantecoepidemics WHERE id = '$planteco'");
+while ($row = $planten->fetch_assoc()) {
+    $plant_name_en = $row['name_en'];
+}
 
+// query epic_en name_en
+$epidemicen = mysqli_query($conn, "SELECT * FROM dataepidemics WHERE id = '$data_pest_epic'");
+while ($row = $epidemicen->fetch_assoc()) {
+    $epic_en = $row['name_en'];
+}
 // function getAddress($latitude, $longitude)
 // {
 //         //google map api url
@@ -36,8 +46,8 @@ while ($row = $data_pest_epic_a->fetch_assoc()) {
 
 
 
-    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description)
-    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip')";
+    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description,plant_en,epidemic_en)
+    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$plant_name_en',$epic_en)";
     $resultInsert = mysqli_query($conn, $sql);
 
 //แจ้งเตือน
