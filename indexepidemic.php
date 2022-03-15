@@ -98,15 +98,15 @@ $query = mysqli_query($conn, $sql);
     }
     </script>
 
-    <script> 
+<script> 
 function runApp() {
-    liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
-        document.getElementsByName("user_name")[0].value = profile.displayName;
-        document.getElementsByName("id_user")[0].value = profile.userId;
-    }).catch(err => console.error(err));
-
+        liff.getProfile().then(profile => {
+            document.getElementById("pictureUrl").src = profile.pictureUrl;
+            document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
+            document.getElementsByName("user_name")[0].value = profile.displayName;
+            document.getElementsByName("id_user")[0].value = profile.userId;
+        }).catch(err => console.error(err));
+    }
     liff.init({ liffId: "1656976284-4b86kPOB" }, () => {
         if (liff.isLoggedIn()) {
             runApp()
@@ -114,7 +114,6 @@ function runApp() {
             liff.login();
         }
     }, err => console.error(err.code, error.message));
-}
 </script>
 
     <script src="assets/jquery.min.js"></script>
