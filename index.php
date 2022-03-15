@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Insert Data</title>
-    <!-- <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script> -->
+    <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,21 +40,7 @@
   </div>
 </section>
     <script> 
-  function runApp() {
-        liff.getProfile().then(profile => {
-            document.getElementById("pictureUrl").src = profile.pictureUrl;
-            document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
-            document.getElementsByName("user_name")[0].value = profile.displayName;
-            document.getElementsByName("id_user")[0].value = profile.userId;
-        }).catch(err => console.error(err));
-    }
-    liff.init({ liffId: "1656912027-kL299Wg7" }, () => {
-        if (liff.isLoggedIn()) {
-            runApp()
-        } else {
-            liff.login();
-        }
-    }, err => console.error(err.code, error.message));
+  
 </script>
 </body>
 
