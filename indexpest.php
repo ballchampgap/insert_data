@@ -120,7 +120,6 @@ function runApp() {
 
     <script src="assets/jquery.min.js"></script>
     <script src="assets/script2.js"></script>
-    <script src="assets/getliff.js"></script>
 </body>
 
 </html>
