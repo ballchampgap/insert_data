@@ -5,7 +5,7 @@
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Insert Data Pest</title>
+    <title>เพิ่มข้อมูลศัตรูพืช</title>
     <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
