@@ -36,8 +36,8 @@ function getAddress($latitude, $longitude)
 
 
 
-    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description,address)
-    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$result')";
+    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description)
+    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip')";
     $resultInsert = mysqli_query($conn, $sql);
 
 //แจ้งเตือน
