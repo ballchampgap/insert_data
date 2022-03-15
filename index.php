@@ -39,7 +39,6 @@
     </div>
   </div>
 </section>
-<script src="assets/getliff.js"></script>
 </body>
 
 </html>
