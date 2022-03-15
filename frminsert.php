@@ -53,13 +53,9 @@ ini_set('display_errors', 1);
     $sMessage .= "👨‍💼ชื่อ:  " . $pname . " \n";
   
      $sMessage .= "ชนิดของพืชเศรษฐกิจ:  " . $planteco_name_th . " \n";
-    
-     if ($pest_epic == 1){
+   
         $sMessage .= "ชื่อโรคระบาด:  " . $data_pest_epic_name_th . " \n";
-    }
-    else{
-        $sMessage .= "ชื่อศัตรูพืช:  " . $data_pest_epic_name_th . " \n";
-    }
+  
     $sMessage .= "ที่อยู่:  " . $result . " \n";
    
 	$chOne = curl_init(); 
