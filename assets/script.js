@@ -88,7 +88,7 @@ function runApp() {
         document.getElementsByName("id_user")[0].value = profile.userId;
     }).catch(err => console.error(err));
 
-    liff.init({ liffId: "1656976272-Jrqed6a7" }, () => {
+    liff.init({ liffId: "1656976272-Z4p0QWO9" }, () => {
         if (liff.isLoggedIn()) {
             runApp()
         } else {
