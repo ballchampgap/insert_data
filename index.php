@@ -19,6 +19,12 @@
 </head>
 
 <body>
+<div class="text-center">
+                        <img id="pictureUrl" width="50%" class="rounded">
+                    </div><br>
+                    <h3 class="text-center text-info">
+                        <p id="displayName"></p>
+                    </h3>
 <section class="vh-100" style="background-color: #508bfc;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -39,7 +45,7 @@
     </div>
   </div>
 </section>
-<!-- <script src="assets/getliff.js"></script> -->
+<script src="assets/getliff.js"></script>
 </body>
 
 </html>
