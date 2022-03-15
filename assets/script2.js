@@ -23,4 +23,12 @@ function runApp() {
         document.getElementsByName("user_name")[0].value = profile.displayName;
         document.getElementsByName("id_user")[0].value = profile.userId;
     }).catch(err => console.error(err));
+
+    liff.init({ liffId: "1656912027-Jx4kkRyB" }, () => {
+        if (liff.isLoggedIn()) {
+            runApp()
+        } else {
+            liff.login();
+        }
+    }, err => console.error(err.code, error.message));
 }
