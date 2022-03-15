@@ -40,13 +40,6 @@
   </div>
 </section>
     <script> 
-  liff.init({ liffId: "1656912027-zPJOO7pv" }, () => {
-    if (liff.isLoggedIn()) {
-        runApp()
-    } else {
-        liff.login();
-    }
-}, err => console.error(err.code, error.message));
 </script>
 </body>
 
