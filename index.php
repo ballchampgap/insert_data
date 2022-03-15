@@ -30,8 +30,8 @@
 
             <hr class="my-4">
 
-            <a href="indexpest.php"  class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" ><i class="fab fa-google me-2"> ศัตรูพืช</i></a><br><br>
-            <a href="indexepidemic.php" class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" ><i class="fab fa-facebook-f me-2">โรคระบาด</i></a>
+            <a href="https://liff.line.me/1656976272-Zqxm6VJw"  class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" ><i class="fab fa-google me-2"> ศัตรูพืช</i></a><br><br>
+            <a href="https://liff.line.me/1656976272-Z4p0QWO9" class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" ><i class="fab fa-facebook-f me-2">โรคระบาด</i></a>
 
           </div>
         </div>
