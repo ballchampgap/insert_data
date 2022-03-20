@@ -83,15 +83,17 @@ ini_set('display_errors', 1);
 //บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
 if ($resultInsert) {
     echo "<script>
-                $(document).ready(function() {
-                    Swal.fire({
-                        title: 'success',
-                        text: 'Data inserted successfully!',
-                        icon: 'success',
-                        timer: 5000,
-                        showConfirmButton: false
-                    });
-                })
+    async function sendMsg() {
+        if (liff.getContext().type !== "none") {
+          await liff.sendMessages([
+            {
+              "type": "text",
+              "text": "This message was sent by sendMessages()"
+            }
+          ])
+          liff.closeWindow()
+        }
+      }
             </script>";
     header('refresh:2; url=index.php');
 }
