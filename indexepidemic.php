@@ -73,7 +73,7 @@ $query = mysqli_query($conn, $sql);
                                 <input type="hidden" name="lat">
                                 <input type="hidden" name="lon">
                                 <input type="hidden" name="pname">
-                                <button id="btn" type="submit" class="btn btn-primary mt-3" onClick="JavaScript:window.close();">Save</button>
+                                <button id="btnSend" type="submit" class="btn btn-primary mt-3" onClick="JavaScript:window.close();">Save</button>
                             </div>
                         </div>
                 </div>
@@ -114,6 +114,23 @@ function runApp() {
             liff.login();
         }
     }, err => console.error(err.code, error.message));
+
+btnSend.onclick = () => {
+sendMsg()
+
+async function sendMsg() {
+  if (liff.getContext().type !== "none") {
+    await liff.sendMessages([
+      {
+        "type": "text",
+        "text": "This message was sent by sendMessages()"
+      }
+    ])
+    liff.closeWindow()
+  }
+}
+}
+
 </script>
 
     <script src="assets/jquery.min.js"></script>
