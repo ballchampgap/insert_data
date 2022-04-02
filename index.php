@@ -14,6 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap');
+</style>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,10 +31,10 @@
             <h3 class="mb-5">เรื่องที่จะแจ้ง</h3>
 
             <hr class="my-4">
-
-            <a href="indexpest.php"  class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" ><i class="fab fa-google me-2"> ศัตรูพืช</i></a><br><br>
-            <a href="indexepidemic.php" class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" ><i class="fab fa-facebook-f me-2">โรคระบาด</i></a>
-
+        
+            <a href="indexpest.php"  class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" ><i class="fab fa-google me-2" font face="Prompt"> ศัตรูพืช</i></a><br><br>
+            <a href="indexepidemic.php" class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" ><i class="fab fa-facebook-f me-2" font face="Prompt">โรคระบาด</i></a>
+           
           </div>
         </div>
       </div>
