@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>เพิ่มข้อมูลโรคระบาด</title>
-    <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -98,7 +98,7 @@ $query = mysqli_query($conn, $sql);
     }
     </script>
 
-<script> 
+<!-- <script> 
 function runApp() {
         liff.getProfile().then(profile => {
             document.getElementById("pictureUrl").src = profile.pictureUrl;
@@ -131,7 +131,7 @@ async function sendMsg() {
 }
 }
 
-</script>
+</script> -->
 
     <script src="assets/jquery.min.js"></script>
     <script src="assets/script.js"></script>

@@ -96,3 +96,50 @@ $(function() {
 //         }
 //     }, err => console.error(err.code, error.message));
 // }
+async function main() {
+    // Initialize LIFF app)
+    await liff.init({ liffId: "1656976284-4b86kPOB" })
+
+    // Try a LIFF function
+    switch (liff.getOS()) {
+        case "android":
+            body.style.backgroundColor = "#d1f5d3";
+            break
+        case "ios":
+            body.style.backgroundColor = "#eeeeee";
+            break
+    }
+}
+main()
+
+async function getUserProfile() {
+    const profile = await liff.getProfile()
+    pictureUrl.src = profile.pictureUrl
+    userId.innerHTML = "<b>userId:</b> " + profile.userId
+    statusMessage.innerHTML = "<b>statusMessage:</b> " + profile.statusMessage
+    displayName.innerHTML = "<b>displayName:</b> " + profile.displayName
+    email.innerHTML = "<b>email:</b> " + liff.getDecodedIDToken().email
+    document.getElementById("pictureUrl").src = profile.pictureUrl;
+    document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
+    document.getElementsByName("pname")[0].value = profile.displayName;
+    document.getElementsByName("id_user")[0].value = profile.userId;
+}
+
+async function sendMsg() {
+    if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
+        await liff.sendMessages([{
+                "type": "text",
+                "text": "Line Developers University Workshop"
+            },
+            {
+                "type": "text",
+                "text": "This message was sent by sendMessages"
+            }
+        ])
+        liff.closeWindow()
+    }
+}
+
+btnSend.onclick = () => {
+    sendMsg()
+}
