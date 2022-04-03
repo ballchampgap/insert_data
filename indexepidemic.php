@@ -99,7 +99,7 @@ $query = mysqli_query($conn, $sql);
     }
     </script>
 
-<script> 
+<!-- <script> 
     function runApp() {
         liff.getProfile().then(profile => {
             document.getElementById("pictureUrl").src = profile.pictureUrl;
@@ -115,7 +115,7 @@ $query = mysqli_query($conn, $sql);
             liff.login();
         }
     }, err => console.error(err.code, error.message));
-</script>
+</script> -->
 
     <script src="assets/jquery.min.js"></script>
     <script src="assets/script.js"></script>
