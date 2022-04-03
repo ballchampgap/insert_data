@@ -73,7 +73,7 @@ $query = mysqli_query($conn, $sql);
                                 <input type="hidden" name="lat">
                                 <input type="hidden" name="lon">
                                 <input type="hidden" name="pname">
-                                <button id="btnSend" type="submit" class="btn btn-primary mt-3" >Save</button>
+                                <button id="btn" type="submit" class="btn btn-primary mt-3" >Save</button>
                             </div>
                         </div>
                 </div>
