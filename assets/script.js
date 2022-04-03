@@ -113,11 +113,12 @@ async function main() {
 main()
 
 async function getUserProfile() {
-    const profile = await liff.getProfile()
-    document.getElementById("pictureUrl").src = profile.pictureUrl;
-    document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
-    document.getElementsByName("pname")[0].value = profile.displayName;
-    document.getElementsByName("id_user")[0].value = profile.userId;
+    liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;
+        document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
+        document.getElementsByName("pname")[0].value = profile.displayName;
+        document.getElementsByName("id_user")[0].value = profile.userId;
+    }).catch(err => console.error(err));
 }
 
 async function sendMsg() {

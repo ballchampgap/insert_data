@@ -99,37 +99,7 @@ $query = mysqli_query($conn, $sql);
     </script>
 
 <!-- <script> 
-function runApp() {
-        liff.getProfile().then(profile => {
-            document.getElementById("pictureUrl").src = profile.pictureUrl;
-            document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
-            document.getElementsByName("pname")[0].value = profile.displayName;
-            document.getElementsByName("id_user")[0].value = profile.userId;
-        }).catch(err => console.error(err));
-    }
-    liff.init({ liffId: "1656976284-4b86kPOB" }, () => {
-        if (liff.isLoggedIn()) {
-            runApp()
-        } else {
-            liff.login();
-        }
-    }, err => console.error(err.code, error.message));
 
-btnSend.onclick = () => {
-sendMsg()
-
-async function sendMsg() {
-  if (liff.getContext().type !== "none") {
-    await liff.sendMessages([
-      {
-        "type": "text",
-        "text": "This message was sent by sendMessages()"
-      }
-    ])
-    liff.closeWindow()
-  }
-}
-}
 
 </script> -->
 
