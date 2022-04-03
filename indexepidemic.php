@@ -81,7 +81,6 @@ $query = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <button id="btnSend">Send Message</button>
     <script> 
     window.onload = function() {
         var lat, lon = null;
