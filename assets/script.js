@@ -96,6 +96,7 @@ $(function() {
 //         }
 //     }, err => console.error(err.code, error.message));
 // }
+// Body element
 const body = document.getElementById('body')
 
 // Button elements
@@ -120,7 +121,7 @@ const friendShip = document.getElementById("friendShip")
 
 async function main() {
     // Initialize LIFF app)
-    await liff.init({ liffId: "1656976284-4b86kPOB" })
+    await liff.init({ liffId: "1656989131-GwK0Q7pg" })
 
     // Try a LIFF function
     switch (liff.getOS()) {
