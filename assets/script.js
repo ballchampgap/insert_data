@@ -96,6 +96,11 @@ $(function() {
 //         }
 //     }, err => console.error(err.code, error.message));
 // }
+const email = document.getElementById("email")
+const userId = document.getElementById("userId")
+const pictureUrl = document.getElementById("pictureUrl")
+const displayName = document.getElementById("displayName")
+const statusMessage = document.getElementById("statusMessage")
 const btnSend = document.getElementById("btnSend")
 async function main() {
     // Initialize LIFF app)
@@ -114,12 +119,12 @@ async function main() {
 main()
 
 async function getUserProfile() {
-    liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("displayName").innerHTML = '<b>ชื่อผู้แจ้ง:</b> ' + profile.displayName;
-        document.getElementsByName("pname")[0].value = profile.displayName;
-        document.getElementsByName("id_user")[0].value = profile.userId;
-    }).catch(err => console.error(err));
+    const profile = await liff.getProfile()
+    pictureUrl.src = profile.pictureUrl
+    userId.innerHTML = "<b>userId:</b> " + profile.userId
+    statusMessage.innerHTML = "<b>statusMessage:</b> " + profile.statusMessage
+    displayName.innerHTML = "<b>displayName:</b> " + profile.displayName
+    email.innerHTML = "<b>email:</b> " + liff.getDecodedIDToken().email
 }
 
 async function sendMsg() {

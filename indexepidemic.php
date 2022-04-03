@@ -81,7 +81,7 @@ $query = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <script> 
+    <!-- <script> 
     window.onload = function() {
         var lat, lon = null;
 
@@ -96,7 +96,7 @@ $query = mysqli_query($conn, $sql);
             });
         }
     }
-    </script>
+    </script> -->
 
 <!-- <script> 
 
