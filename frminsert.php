@@ -32,17 +32,17 @@ $epidemicen = mysqli_query($conn, "SELECT * FROM dataepidemics WHERE id = '$data
 while ($row = $epidemicen->fetch_assoc()) {
     $epic_en = $row['name_en'];
 }
-// function getAddress($latitude, $longitude)
-// {
-//         // google map api url
-//         $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
+function getAddress($latitude, $longitude)
+{
+        // google map api url
+        $url = "https://maps.google.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=AIzaSyASbZrFhniY4kK1neOBybtfgyUXNaH1WrU";
 
-//         // send http request
-//         $geocode = file_get_contents($url);
-//         $json = json_decode($geocode);
-//         $address = $json->results[3]->formatted_address;
-//         return $address;
-// }
+        // send http request
+        $geocode = file_get_contents($url);
+        $json = json_decode($geocode);
+        $address = $json->results[3]->formatted_address;
+        return $address;
+}
 
 
 

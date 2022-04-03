@@ -73,7 +73,7 @@ $query = mysqli_query($conn, $sql);
                                 <input type="hidden" name="lat">
                                 <input type="hidden" name="lon">
                                 <input type="hidden" name="pname">
-                                <button id="btn" type="submit" class="btn btn-primary mt-3" >Save</button>
+                                <button id="btnSend" type="submit" class="btn btn-primary mt-3" >Save</button>
                             </div>
                         </div>
                 </div>
@@ -99,7 +99,7 @@ $query = mysqli_query($conn, $sql);
     }
     </script>
 
-<!-- <script> 
+<script> 
     function runApp() {
         liff.getProfile().then(profile => {
             document.getElementById("pictureUrl").src = profile.pictureUrl;
@@ -115,7 +115,28 @@ $query = mysqli_query($conn, $sql);
             liff.login();
         }
     }, err => console.error(err.code, error.message));
-</script> -->
+    
+const btnSend = document.getElementById("btnSend")
+async function sendMsg() {
+    if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
+        await liff.sendMessages([{
+                "type": "text",
+                "text": "Line Developers University Workshop"
+            },
+            {
+                "type": "text",
+                "text": "This message was sent by sendMessages"
+            }
+        ])
+        liff.closeWindow()
+    }
+}
+
+btnSend.onclick = () => {
+    sendMsg()
+}
+    
+</script>
 
     <script src="assets/jquery.min.js"></script>
     <script src="assets/script.js"></script>
