@@ -96,6 +96,7 @@ $(function() {
 //         }
 //     }, err => console.error(err.code, error.message));
 // }
+const btnSend = document.getElementById("btnSend")
 async function main() {
     // Initialize LIFF app)
     await liff.init({ liffId: "1656976284-4b86kPOB" })
