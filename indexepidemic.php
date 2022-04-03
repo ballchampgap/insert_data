@@ -36,7 +36,7 @@ $sql = "SELECT * FROM plantecoepidemics";
 $query = mysqli_query($conn, $sql);
 ?>
 
-<body>
+<body id="body">
     <div id="login">
         <div class="loading"></div>
         <div class="container my-5">
