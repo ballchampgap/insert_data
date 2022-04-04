@@ -6,7 +6,7 @@ function runApp() {
         document.getElementsByName("id_user")[0].value = profile.userId;
     }).catch(err => console.error(err));
 }
-liff.init({ liffId: "1656976272-Jrqed6a7" }, () => {
+liff.init({ liffId: "1656976284-2geMlQqP" }, () => {
     if (liff.isLoggedIn()) {
         runApp()
     } else {
