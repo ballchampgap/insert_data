@@ -40,9 +40,10 @@ function getAddress($latitude, $longitude)
         // send http request
         $geocode = file_get_contents($url);
         $json = json_decode($geocode);
-        $address = $json->results[3]->formatted_address;
+        $address = $json->results[1]->formatted_address;
         return $address;
 }
+echo $result;
 
 
 
@@ -83,19 +84,19 @@ ini_set('display_errors', 1);
 	curl_close( $chOne );   
 
 //บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
-if ($resultInsert) {
-    echo "<script>
-                $(document).ready(function() {
-                    Swal.fire({
-                        title: 'success',
-                        text: 'Data inserted successfully!',
-                        icon: 'success',
-                        timer: 5000,
-                        showConfirmButton: false
-                    });
-                })
-            </script>";
-    header('refresh:2; url=index.php');
-}
+// if ($resultInsert) {
+//     echo "<script>
+//                 $(document).ready(function() {
+//                     Swal.fire({
+//                         title: 'success',
+//                         text: 'Data inserted successfully!',
+//                         icon: 'success',
+//                         timer: 5000,
+//                         showConfirmButton: false
+//                     });
+//                 })
+//             </script>";
+//     header('refresh:2; url=index.php');
+// }
 
 ?>
