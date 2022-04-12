@@ -12,7 +12,7 @@ $longitude = $_POST['lon'];
 $descrip = $_POST['descrip'];
 $result = getAddress($latitude, $longitude);
 $aray = explode(',', $result);
-$chang_wat = $aray[3]
+$chang_wat = $aray[3];
 // query planteco name_th
 $plant = mysqli_query($conn, "SELECT * FROM plantecoepidemics WHERE id = '$planteco'");
 while ($row = $plant->fetch_assoc()) {
