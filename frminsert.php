@@ -45,12 +45,9 @@ function getAddress($latitude, $longitude)
         $address = $json->results[0]->formatted_address;
         return $address;
 }
-echo $chang_wat;
 
-
-
-    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description,plant_en,epidemic_en,address)
-    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$plant_name_en','$epic_en','$result')";
+    $sql = "INSERT INTO epidemics (yname,plant_type,data_epidemic,lat,lon,description,plant_en,epidemic_en,address,chang_wat)
+    VALUE ('$pname', '$planteco_name_th', '$data_pest_epic_name_th','$latitude','$longitude','$descrip','$plant_name_en','$epic_en','$result','$chang_wat')";
     $resultInsert = mysqli_query($conn, $sql);
 
 //แจ้งเตือน
@@ -85,20 +82,20 @@ ini_set('display_errors', 1);
 
 	curl_close( $chOne );   
 
-//บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
-// if ($resultInsert) {
-//     echo "<script>
-//                 $(document).ready(function() {
-//                     Swal.fire({
-//                         title: 'success',
-//                         text: 'Data inserted successfully!',
-//                         icon: 'success',
-//                         timer: 5000,
-//                         showConfirmButton: false
-//                     });
-//                 })
-//             </script>";
-//     header('refresh:2; url=index.php');
-// }
+บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
+if ($resultInsert) {
+    echo "<script>
+                $(document).ready(function() {
+                    Swal.fire({
+                        title: 'success',
+                        text: 'Data inserted successfully!',
+                        icon: 'success',
+                        timer: 5000,
+                        showConfirmButton: false
+                    });
+                })
+            </script>";
+    header('refresh:2; url=index.php');
+}
 
 ?>
