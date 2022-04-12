@@ -11,6 +11,8 @@ $latitude = $_POST['lat'];
 $longitude = $_POST['lon'];
 $descrip = $_POST['descrip'];
 $result = getAddress($latitude, $longitude);
+$aray = explode(',', $result);
+$chang_wat = $aray[3]
 // query planteco name_th
 $plant = mysqli_query($conn, "SELECT * FROM plantecopests WHERE id = '$planteco'");
 while ($row = $plant->fetch_assoc()) {
@@ -40,10 +42,9 @@ function getAddress($latitude, $longitude)
         // send http request
         $geocode = file_get_contents($url);
         $json = json_decode($geocode);
-        $address = $json->results[3]->formatted_address;
+        $address = $json->results[1]->formatted_address;
         return $address;
 }
-
 
 
 $sql = "INSERT INTO pests (yname,plant_type,data_pest,lat,lon,description,plant_en,pest_en,address)
