@@ -82,7 +82,7 @@ ini_set('display_errors', 1);
 
 	curl_close( $chOne );   
 
-บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
+//บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม
 if ($resultInsert) {
     echo "<script>
                 $(document).ready(function() {
